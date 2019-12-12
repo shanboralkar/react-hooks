@@ -24,7 +24,6 @@ function CreateTask({ addTask }) {
     e.preventDefault();
     if (!value) return;
     addTask(value);
-    setValue("");
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -44,11 +43,11 @@ function Todo() {
   const [tasks, setTasks] = useState([
     {
       title: "Grab some Pizza",
-      completed: true
+      completed: false
     },
     {
       title: "Do your workout",
-      completed: true
+      completed: false
     },
     {
       title: "Hangout with friends",
